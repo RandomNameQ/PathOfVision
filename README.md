@@ -3,7 +3,7 @@ Path of Vision - это приложение, которое обнаружив�
 # [English description](#english-description) 💡
 <br>
 ### [Discrod](https://discord.gg/2CMYfUBMsq)
-### [Redit](https://discord.gg/2CMYfUBMsq)
+
 <br>
 
 https://github.com/RandomNameQ/PathOfVision/assets/125605136/4e10c7f0-b680-4446-b83b-45da8f64e877
