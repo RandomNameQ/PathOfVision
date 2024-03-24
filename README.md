@@ -1,6 +1,6 @@
 Path of Vision - это приложение, которое обнаруживает иконки, которые вы выбрали, и отображает их в нужном месте экрана, с определенным размером и прозрачностью. Приложение также поддерживает работу с геймпадами, если к ПК подключен геймпад.
 
-### [English description](#english-description)
+### [English description](#english-description-1)
 
 https://github.com/RandomNameQ/PathOfVision/assets/125605136/4e10c7f0-b680-4446-b83b-45da8f64e877
 
