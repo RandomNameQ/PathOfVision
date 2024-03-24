@@ -3,6 +3,10 @@ Path of vision - обнаруживает иконки, который вы вы
 
 https://github.com/RandomNameQ/PathOfVision/assets/125605136/4e10c7f0-b680-4446-b83b-45da8f64e877
 
+
+
+
+
 Как запустить?
 1. В icons выбираешь иконки (если стоит галочка, то иконка выбранна).
 ![image](https://github.com/RandomNameQ/PathOfVision/assets/125605136/83864abb-4000-469d-b6af-2ad53740e5ad)
