@@ -2,8 +2,10 @@ Path of Vision - это приложение, которое обнаружив�
 
 # [English description](#english-description) 💡
 
+<br>
 
 ### [Discrod](https://discord.gg/2CMYfUBMsq)
+### [Redit](https://discord.gg/2CMYfUBMsq)
 
 <br>
 
