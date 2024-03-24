@@ -61,3 +61,55 @@ https://github.com/RandomNameQ/PathOfVision/assets/125605136/4e10c7f0-b680-4446-
 
 # English-description
 
+Path of Vision is an application that detects the icons you have selected and displays them in the desired location on the screen, with a specific size and transparency. The application also supports gamepads if a gamepad is connected to the PC.
+
+<br>
+
+
+# 💡 How to launch?
+1. Select icons in the "Icons" tab. If there is a checkmark, then the icon is selected.
+![image](https://github.com/RandomNameQ/PathOfVision/assets/125605136/83864abb-4000-469d-b6af-2ad53740e5ad)
+2. Click the "Icon Positioning" button and move the icons or change their size.
+3. Settings are saved using the "Save settings" button. When the button turns green, it means the settings have been saved.
+4. In the "Main" tab, configure the scanning area in "Screen Area Settings".
+The scanning area determines the width and height of the area in which scanning occurs.
+To save the settings, click "Save settings". The "Make test screen..." button takes a screenshot, and "Open folder" opens the folder with the program.
+7. When everything is configured, click "Start scan".
+8. If you need to change the display settings for icons, stop scanning, make changes, and start scanning again.
+
+# 🛠️Functionality
+1. The application takes a screenshot of an area of the screen every 0.1 seconds.
+2. Finds icons in this area.
+3. Compares the found icons with the icons from the program. If the program finds identical icons, it displays them on the screen.
+
+# 🐞Known issues
+-The program must be uninstalled through the task manager, otherwise it will not terminate.
+-Icons sometimes blink.
+-Some icons are not located.
+-Some icons are replaced by others.
+
+Fatal problem
+Poeshka generates different icons. You can see examples in Icon\AllCuttedIcon. Poe renders icons in different ways, which leads to shifts inside the images (I guess I don't know).
+
+# 💡 FAQ.
+1. I don’t have icons, where can I get them?
+-Check the "cut icons" checkbox in main and click "start scan", now the program will save all unique icons in the "Icon\AllCuttedIcon" folder.
+2. How to add a new icon?
+Get the icons, rename them (don’t put spaces) and put the icon in Icon\Buffs. Run the program, turn it off and run it again (on the first run, a place for the icon is created, but on the second it is added to the list).
+3. The icon has disappeared.
+-Reset the position to X200 and Y200 - maybe the icon has gone off the screen. Make the opacity in the center - maybe it is 100% transparent.
+5. The icon is not displayed or another icon is displayed.
+The icon is not displayed or a different icon is displayed.
+
+Algorithm used to detect "identical" pictures:
+
+The top\bottom\left\right line of pixels from the icon from the game is taken and the sum of all colors is saved.
+Then the icon we selected is taken, its color sum is collected, and now we compare the two color sums. If the difference between the numbers is no more than 10%, then we have found the same pictures.
+
+In such conditions, some icons are not found, and sometimes the wrong pictures are found. To fix this, you need to change your approach to image detection.
+
+For example, if you increase the ArgbDiffrence parameter in the tab from 10% to 20%, then the icon may be found more often, and/or other icons may be found instead of the one you are looking for. If you reduce the value from 10% to 5%, this may solve the problem with other icons being located.
+
+By default, the program compares the top and bottom sides of pixels. You can change this by either selecting all 4 sides (which will increase the chance of an icon or another being found), or reducing the number, or choosing a different zone.
+
+For example, if you search for MoltenShell and the program finds Onslaught, the problem is that both icons have similar top colors. In this case, tell the program to look for colors on the side where the icons are not the same.
