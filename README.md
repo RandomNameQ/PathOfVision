@@ -5,7 +5,7 @@ Path of Vision - это приложение, которое обнаружив�
 <br>
 
 ### [Discrod](https://discord.gg/2CMYfUBMsq)
-### [Redit](https://discord.gg/2CMYfUBMsq)
+### [Redit]([https://discord.gg/2CMYfUBMsq](https://www.reddit.com/r/pathofexile/comments/1bmn5ut/tool_qol_detect_icons_application/?xpromo_edp=enabled))
 
 <br>
 
