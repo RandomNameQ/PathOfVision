@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>Img\itachi-alt.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="BTC.jpg" />
+    <None Remove="ETH.jpg" />
+    <None Remove="UIModel\BastionOfHope.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Img\itachi-alt.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="InputSimulator" Version="1.0.4" />
+    <PackageReference Include="MaterialDesignThemes" Version="5.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="System.Drawing.Common" Version="8.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="BTC.jpg" />
+    <Resource Include="ETH.jpg" />
+    <Resource Include="UIModel\BastionOfHope.png" />
+  </ItemGroup>
+
+</Project>

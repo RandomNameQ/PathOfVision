@@ -1,0 +1,233 @@
+﻿<Window x:Class="PathOfVision.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PathOfVision"
+        mc:Ignorable="d"
+        Title="Path of Vision" Height="664" Width="1002">
+    <TabControl x:Name="Tab_General" >
+
+
+
+        <TabItem x:Name="Tab_Buff" Header="Icons">
+            <Grid Background="#FFE5E5E5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition/>
+
+                </Grid.RowDefinitions>
+
+
+
+                <ListBox x:Name="Tab_Buff_ListBox" Grid.Row="1"  ScrollViewer.HorizontalScrollBarVisibility="Auto">
+                    <ListBoxItem x:Name="Tab_Buff_ListBox_Element" Width="Auto" >
+                        <StackPanel Orientation="Horizontal">
+                            <Image x:Name="Tab_Buff_Image" Source="C:\Users\zero\source\repos\PathOfVision\PathOfVision\UIModel\BastionOfHope.png" Width="60" HorizontalAlignment="Right" />
+                            <CheckBox x:Name="Tab_Buff_CheckBox" Content="ТекстТекстТекстТеек" FontSize="20" FontStretch="Normal" Checked="CheckBox_Checked" Margin="0,0,10,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  />
+                        </StackPanel>
+                    </ListBoxItem>
+
+                </ListBox>
+
+
+                <ListBox x:Name="Tab_IconSettings" Grid.Column="1" Grid.Row="2" ScrollViewer.HorizontalScrollBarVisibility="Auto">
+                    <Button x:Name="SaveSettingsButton" Content="Save Setttings" FontSize="20" IsDefault="True" Background="White" />
+                    <Label x:Name="IconName" Content="Name:"  FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center" VerticalContentAlignment="Center"/>
+
+                    
+
+                    <CheckBox x:Name="IconWithName" Content="Icon with time" Grid.Row="1" ToolTip="if need to display an icon with the duration time" Margin="0,5,0,0" FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Center" VerticalContentAlignment="Center"/>
+                    <CheckBox x:Name="IconWithNumber" Content="Icon with numbers" Grid.Row="1" ToolTip="if the icon changes(number on icon, not time), then cut off 70% of the top part and check like this" Margin="0,5,0,0" FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Center" VerticalContentAlignment="Center" Visibility="Collapsed"/>
+                    <Label  Content="Opacity"  FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center" VerticalContentAlignment="Center"/>
+                    <Slider x:Name="IconOpacity" Width="200" Maximum="100"/>
+                    <Label Content="WidthSize"  FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center" VerticalContentAlignment="Center"/>
+                    <TextBox x:Name="IconWidthSize" Width="100" />
+                    <Label Content="HeightSize"  FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center" VerticalContentAlignment="Center"/>
+                    <TextBox x:Name="IconHeightSize" Width="100" />
+                    <Label Content="ScreenPositionX"  FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center" VerticalContentAlignment="Center"/>
+                    <TextBox x:Name="ScreenPositionX" Width="100" />
+                    <Label Content="ScreenPositionY"  FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center" VerticalContentAlignment="Center"/>
+                    <TextBox x:Name="ScreenPositionY" Width="100" />
+                    <CheckBox x:Name="AppearanceSound"  Content="Appearance sound" Grid.Row="1" ToolTip="make a sound if the icon appears" Margin="0,5,0,0" FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Center" VerticalContentAlignment="Center"/>
+                    <Button x:Name="AppearanceSoundClick" Content="Chose appearance sound" />
+                    <CheckBox x:Name="DissapearanceSound"  Content="Disappearance sound" Grid.Row="1" ToolTip="make a sound if the icon disappears" Margin="0,5,0,0" FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Center" VerticalContentAlignment="Center"/>
+                    <Button x:Name="DissapearanceSoundClick" Content="Chose dissapearance sound"/>
+
+
+
+                </ListBox>
+
+
+
+
+
+
+
+                <ListBox x:Name="Tab_IconSettingsPosition" Grid.Column="2" Grid.Row="2" ScrollViewer.HorizontalScrollBarVisibility="Auto" VerticalContentAlignment="Center">
+                    <Button x:Name="IconPositioning" FontSize="30" Content="Icon positioning" />
+                    <Label Content="Сomparison settings"  FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Center" VerticalContentAlignment="Center"/>
+
+                    <Label Content="Image scanning area" ToolTip="The comparison algorithm cuts out the center of the icon 30x30, takes a line of 5 pixels from the beginning to 5 ends, obtains the sum of the color and compares it with the icon that it found on the screen. Sometimes the icons will be similar to each other - you should change the detection area."  FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center" VerticalContentAlignment="Center"/>
+                    <Label Content="ArgbDiffrence" ToolTip="If the icon is not found, increase the value, if other icons are found, decrease it. Default value 10"  FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center" VerticalContentAlignment="Center"/>
+                    <TextBox x:Name="argbDiffrence" Width="100" />
+
+                    
+                    <CheckBox x:Name="IsTopCheck" Content="TopSide" Grid.Row="1" Margin="0,5,0,0" FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Center" VerticalContentAlignment="Center"/>
+                    <CheckBox x:Name="IsBotCheck" Content="BotSide" Grid.Row="1"  Margin="0,5,0,0" FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Center" VerticalContentAlignment="Center"/>
+                    <CheckBox x:Name="IsLeftCheck" Content="LeftSide" Grid.Row="1"  Margin="0,5,0,0" FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Center" VerticalContentAlignment="Center"/>
+                    <CheckBox x:Name="IsRightCheck" Content="RightSide" Grid.Row="1" Margin="0,5,0,0" FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Center" VerticalContentAlignment="Center"/>
+                    <CheckBox x:Name="IsShowAllResult" Content="ShowMultiIcon" Grid.Row="1" ToolTip="If the algorithm finds a similar icon, it starts looking for the next one. But sometimes some icons are similar to each other and the program may produce an incorrect picture and look for the next one. Then turn this on so that the program shows all the results." Margin="0,5,0,0" FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Center" VerticalContentAlignment="Center"/>
+                </ListBox>
+
+
+
+
+
+            </Grid>
+        </TabItem>
+
+        <TabItem x:Name="Tab_Main" Header="Main" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch">
+            <Grid Background="#FFE5E5E5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="341*"/>
+                    <ColumnDefinition Width="368*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Vertical" Margin="85,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left">
+                    <Button Content="Start scan" HorizontalAlignment="Left" VerticalAlignment="Center" Click="StartScan_Click" FontSize="30" Background="#FF87FFAF"/>
+                    <Button Content="Stop scan" HorizontalAlignment="Left" VerticalAlignment="Center" Click="StopScan_Click" FontSize="30" Background="#FFFB9A9A"/>
+                    <CheckBox Content="Cut Icons" ToolTip="If enabled, new icons found in the game will be saved in the Icon\Buffs folder (affects performance)" Margin="0,10,0,0" Grid.Row="1" FontSize="30" VerticalContentAlignment="Center" Checked="IsCutIcon_Checked" Unchecked="IsCutIcon_Unchecked"/>
+                    <Label x:Name="CountDetectedIcons" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Detect 6 icons" FontSize="30"> </Label>
+                    <Button Content="Open folder" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,20,0,0" Click="OpenFolder_Click" FontSize="30"/>
+                </StackPanel>
+                
+                
+                
+                <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical" Margin="85,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left">
+                    <TextBlock Text="Screen area settings" FontSize="30" TextWrapping="Wrap" />
+                    <TextBlock Text="Width(X) screen" FontSize="25" Margin="0,20,0,0" TextWrapping="Wrap" />
+                    <TextBox x:Name="screenWidth" Width="100" HorizontalAlignment="Left" />
+                    <TextBlock Text="Height(Y) screen" FontSize="25"  Margin="0,20,0,0" TextWrapping="Wrap" />
+                    <TextBox x:Name="screenHeight" Width="100" HorizontalAlignment="Left" />
+
+                    <TextBlock Text="Distance from left edge of screen" FontSize="25"  Margin="0,20,0,0" TextWrapping="Wrap" />
+                    <TextBox x:Name="distanceFromLeft" Width="100" HorizontalAlignment="Left" />
+                    <TextBlock Text="Distance from top of screen" FontSize="25"  Margin="0,20,0,0" TextWrapping="Wrap" />
+                    <TextBox x:Name="disatnceFromTop" Width="100" HorizontalAlignment="Left" />
+
+                    <Button Content="Save settings" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,20,0,0" Click="SaveScreenSettings_Click" FontSize="30"/>
+                    <Button Content="Make test screenshot" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,20,0,0" Click="TestScreen_Click" FontSize="30"/>
+
+                </StackPanel>
+
+            </Grid>
+        </TabItem>
+
+        <TabItem x:Name="Tab_Journal" Header="Journal">
+            <Grid Background="#FFE5E5E5">
+                
+
+                <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Left">
+                    <Label Content="Dont work." FontSize="30"/>
+                    <TextBlock Text="Tracks how many times you have been dealt X debuffs and X buffs per map or time." FontSize="30" TextWrapping="Wrap" />
+                </StackPanel>
+
+            </Grid>
+        </TabItem>
+        <TabItem x:Name="PriceChecker" Header="ScanCurrency">
+            <Grid Background="#FFE5E5E5">
+
+
+                <StackPanel Grid.Row="1" Grid.Column="1">
+                    <Label Content="Dont work." FontSize="30"/>
+                    <TextBlock Text="Scan inventory/trade and show how much currency is inside." FontSize="30" TextWrapping="Wrap" />
+                </StackPanel>
+
+            </Grid>
+        </TabItem>
+        <TabItem x:Name="ZeroClick" Header="ZeroClick">
+            <Grid Background="#FFE5E5E5">
+
+
+                <StackPanel Grid.Row="1" Grid.Column="1">
+                    <Label Content="Dont work." FontSize="30"/>
+                    <TextBlock Text="Emulate pressing X key for X amount of time. For example, emulate pressing the left button every 0.1 so as not to hold the mouse down." FontSize="30" TextWrapping="Wrap" />
+                </StackPanel>
+
+            </Grid>
+        </TabItem>
+
+        <TabItem IsEnabled="False" Visibility="Hidden">
+            <TabItem.Header>
+                <Label Content=" " Width="10"/>
+            </TabItem.Header>
+        </TabItem>
+        
+        <TabItem x:Name="Tab_Credit" Header="Credits">
+            <Grid Background="#FFE5E5E5">
+
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition/>
+
+                    </Grid.RowDefinitions>
+                    
+                        <StackPanel Grid.Row="1" Grid.Column="0" Margin="0,15,0,0">
+                        <Button Click="OpenDiscordPage_Click" Content="Open discord Code: Requiem" FontSize="30" />
+                        <Button Click="OpenGitHubPage_Click" Content="Open github" FontSize="30" />
+                    </StackPanel>
+
+
+                    <StackPanel Grid.Row="1" Grid.Column="1" Margin="0,15,0,0">
+                        <TextBlock Text="Donut" FontSize="30" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,25" />
+
+                        <TextBlock Text="Accept tip in scroll fragments" FontSize="20" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        <TextBlock Text="5469 6600 1150 7617 на чай" FontSize="20" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,25" />
+                        
+                        
+                            <TextBlock Text="Bitcoin" FontSize="30" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            <Image Source="/BTC.jpg" Width="150" />
+                            <TextBlock Text="bc1qvtsc8p7stzpj88hyhd2z45ps5q62auxceztmxf" FontSize="30" TextWrapping="Wrap" Margin="10,5,10,5" />
+
+                            <TextBlock Text="Ethereum" FontSize="30" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            <Image Source="/ETH.jpg" Width="150" />
+                            <TextBlock Text="0x17e06f02FA09B5E1314e46B775d2825B480a57f5" FontSize="30" TextWrapping="Wrap" Margin="10,5,10,5" />
+                        
+                       
+
+                    </StackPanel>
+                </Grid>
+
+
+
+
+            </Grid>
+        </TabItem>
+
+
+
+
+
+
+
+    </TabControl>
+
+</Window>

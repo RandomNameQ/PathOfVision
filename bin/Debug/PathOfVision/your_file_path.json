@@ -1,0 +1,44 @@
+[
+  {
+    "name": "BastionOfHope",
+    "imagePath": "Icon\\Buffs\\BastionOfHope.png",
+    "isSearcheabled": true,
+    "pixels": null,
+    "image": "System.Drawing.Bitmap"
+  },
+  {
+    "name": "ConcecratedGround",
+    "imagePath": "Icon\\Buffs\\ConcecratedGround.png",
+    "isSearcheabled": true,
+    "pixels": null,
+    "image": "System.Drawing.Bitmap"
+  },
+  {
+    "name": "DreadBanner",
+    "imagePath": "Icon\\Buffs\\DreadBanner.png",
+    "isSearcheabled": true,
+    "pixels": null,
+    "image": "System.Drawing.Bitmap"
+  },
+  {
+    "name": "FleshAndStone",
+    "imagePath": "Icon\\Buffs\\FleshAndStone.png",
+    "isSearcheabled": true,
+    "pixels": null,
+    "image": "System.Drawing.Bitmap"
+  },
+  {
+    "name": "Focus",
+    "imagePath": "Icon\\Buffs\\Focus.png",
+    "isSearcheabled": true,
+    "pixels": null,
+    "image": "System.Drawing.Bitmap"
+  },
+  {
+    "name": "StoneGolem",
+    "imagePath": "Icon\\Buffs\\StoneGolem.png",
+    "isSearcheabled": true,
+    "pixels": null,
+    "image": "System.Drawing.Bitmap"
+  }
+]
